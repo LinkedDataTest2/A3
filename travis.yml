@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk8
+  
+notifications:
+  webhooks: https://travis-buddy-service.herokuapp.com
+ 
+before_script:
+  - chmod +x ./build/compileTasks.sh
+  
+script:
+  - TASKS=(Task06 Task07)
+  - ./build/compileTasks.sh
+  
